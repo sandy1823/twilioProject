@@ -1,11 +1,18 @@
 var { Client } = require('pg')
 
+var clientUrl = `PGPASSWORD=nZdtFL9UumjIfGmnjMFFBuEUOy0cUBuH psql -h dpg-ckv1bmjamefc73d96cm0-a.singapore-postgres.render.com -U smartusers_user smartusers`
+
+// var Dbclient = new Client({
+//     port: '5432',
+    
+//     host: 'dpg-ckv1bmjamefc73d96cm0-a',
+//     user: 'smartusers_user',
+//     password: 'nZdtFL9UumjIfGmnjMFFBuEUOy0cUBuH',
+//     database: 'smartusers'
+// })
+
 var Dbclient = new Client({
-    port: '5432',
-    host: 'localhost',
-    user: 'postgres',
-    password: 'santhosh',
-    database: 'smartusers'
+    connectionString:'postgres://smartusers_user:nZdtFL9UumjIfGmnjMFFBuEUOy0cUBuH@dpg-ckv1bmjamefc73d96cm0-a/smartusers'
 })
 
 
